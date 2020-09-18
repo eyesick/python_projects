@@ -3,6 +3,7 @@ from abc import ABC, abstractmethod
 class computer(ABC):
     def comp_type(self, os):
         print("Computer runs off of ", os)
+    @abstractmethod
     def comp_cost(self, cost):
         pass
 
