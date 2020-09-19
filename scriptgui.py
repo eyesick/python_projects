@@ -11,18 +11,18 @@ def browse_button(self):
     print(filename)
 
 def html(self):
-    header = self.filepath1.get()
-    f = open("text.html", "w")
+    header = self.filepath1.get() #grabs the value stored in the second text box and stores it in variable header
+    f = open("text.html", "w") #opens an html file or creates one if that file doesnt exist and overwrites its content
     x=("""<html> 
          <body> 
             <h1>
               {} 
            </h1>
          </body> 
-    </html> """.format(header))
-    f.write(x)
-    f.close()
-    webbrowser.open("text.html")
+    </html> """.format(header))# assiging html structure to x with a wild card for the content of <h1> use format to fill  the wild card
+    f.write(x) #write the contents of variable x to the document
+    f.close() # close the doc
+    webbrowser.open("text.html") #open file in web browser
     
 
 #def set_header(self):
